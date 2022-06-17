@@ -1,0 +1,33 @@
+{
+  "name": "near-sample-as-contracts",
+  "version": "1.0.0",
+  "description": "sameples for near contracts in assembly-script",
+  "main": "as-pect.config.js",
+  "scripts": {
+    "build": "npm run build:contract:debug",
+    "build:contract": "asb",
+    "build:contract:debug": "asb --target debug",
+    "clean": "rm -rf ./out",
+    "test": "npm run test:unit",
+    "test:unit": "asp --verbose -f unit.spec",
+    "test:simulate:vm": "npm run near-vm",
+    "test:simulate:vm:greeting": "npm run test:simulate:vm --wasm-file out/debug/01.greeting.wasm --method-name sayMyName"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuev/near-sample-as-contracts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tuev/near-sample-as-contracts/issues"
+  },
+  "homepage": "https://github.com/tuev/near-sample-as-contracts#readme",
+  "devDependencies": {
+    "near-cli": "^3.3.1",
+    "near-sdk-as": "^3.2.3"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}

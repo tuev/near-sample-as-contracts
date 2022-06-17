@@ -1,0 +1,6 @@
+{
+  "workspaces": [
+    "assembly/hello-world"
+  ],
+  "outDir": "./out"
+}
